@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wendo Lucky — Game & Animation Technology Portfolio</title>
+  <meta name="description" content="Portfolio of Wendo Lucky: game development, animation, graphic design and video editing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <header class="nav">
+    <a href="#top" class="logo" data-sfx>WL<span>.</span></a>
+    <nav>
+      <a href="#about" data-sfx>About</a>
+      <a href="#skills" data-sfx>Skills</a>
+      <a href="#work" data-sfx>Work</a>
+      <a href="#viewer" data-sfx>3D Viewer</a>
+      <a href="#contact" data-sfx>Contact</a>
+    </nav>
+    <button id="soundToggle" class="sound" aria-pressed="false" title="Toggle sound effects">🔇 Sound off</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-text">
+      <p class="eyebrow">// Game &amp; Animation Technology Student</p>
+      <h1>Hi, I'm <span class="grad">Wendo Lucky</span>.</h1>
+      <p class="lead">I design, animate and build playable worlds — from graphic design and video editing to games and animations.</p>
+      <div class="cta">
+        <a href="#work" class="btn primary" data-sfx>▶ View my work</a>
+        <a href="#contact" class="btn" data-sfx>Let's talk</a>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <h2><span class="num">01</span> About</h2>
+    <div class="about-grid">
+      <p>
+        I'm a student pursuing <strong>Gaming and Animation Technology</strong>. I started with graphic design and video editing,
+        and grew into building games and animations. I love the moment when art, motion and code come together and someone
+        can actually <em>play</em> or <em>feel</em> what I made.
+      </p>
+      <div class="stats">
+        <div><b>4</b><span>Disciplines</span></div>
+        <div><b>∞</b><span>Curiosity</span></div>
+        <div><b>Lvl&nbsp;Up</b><span>Always learning</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section reveal">
+    <h2><span class="num">02</span> Skills &amp; Tools</h2>
+    <div class="skill-cols">
+      <div class="skill-card" data-sfx>
+        <h3>🎮 Game Dev</h3>
+        <div class="tags"><span>Unity</span><span>Unreal Engine 5</span><span>C#</span><span>Blueprints</span></div>
+      </div>
+      <div class="skill-card" data-sfx>
+        <h3>🎞 Animation &amp; 3D</h3>
+        <div class="tags"><span>Blender</span><span>Maya</span><span>After Effects</span></div>
+      </div>
+      <div class="skill-card" data-sfx>
+        <h3>🎨 Graphic Design</h3>
+        <div class="tags"><span>Photoshop</span><span>Illustrator</span><span>Figma</span></div>
+      </div>
+      <div class="skill-card" data-sfx>
+        <h3>🎬 Video Editing</h3>
+        <div class="tags"><span>Premiere Pro</span><span>After Effects</span><span>DaVinci Resolve</span></div>
+      </div>
+    </div>
+    <p class="hint">Edit this list in <code>index.html</code> to match the tools you really use.</p>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section reveal">
+    <h2><span class="num">03</span> Selected Work</h2>
+    <div class="filters" id="filters">
+      <button class="chip active" data-filter="all" data-sfx>All</button>
+      <button class="chip" data-filter="game" data-sfx>Games</button>
+      <button class="chip" data-filter="animation" data-sfx>Animation</button>
+      <button class="chip" data-filter="design" data-sfx>Graphic Design</button>
+      <button class="chip" data-filter="video" data-sfx>Video</button>
+    </div>
+
+    <div class="grid" id="projectGrid">
+      <!-- PROJECT CARD TEMPLATE: copy/paste a card, change data-cat, text, tags and link -->
+      <article class="card" data-cat="game" data-sfx>
+        <div class="thumb t1"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="card-body">
+          <h3>Your Game Title</h3>
+          <p>Short description: genre, your role, what you built (mechanics, levels, art...).</p>
+          <div class="tags"><span>Unity</span><span>C#</span><span>Blender</span></div>
+          <a href="#" class="link">Play / View →</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="game" data-sfx>
+        <div class="thumb t2"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="card-body">
+          <h3>Second Game Project</h3>
+          <p>Game jam, class project or personal build. Say what the challenge was.</p>
+          <div class="tags"><span>Unreal Engine 5</span><span>Blueprints</span></div>
+          <a href="#" class="link">Play / View →</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="animation" data-sfx>
+        <div class="thumb t3"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="card-body">
+          <h3>Animation Short</h3>
+          <p>Character animation, motion graphics or a short film. Mention length and your role.</p>
+          <div class="tags"><span>Blender</span><span>After Effects</span></div>
+          <a href="#" class="link">Watch →</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="design" data-sfx>
+        <div class="thumb t4"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="card-body">
+          <h3>Brand / Poster Design</h3>
+          <p>Logo, poster or social media set. Show before/after or the concept behind it.</p>
+          <div class="tags"><span>Photoshop</span><span>Illustrator</span></div>
+          <a href="#" class="link">View →</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="video" data-sfx>
+        <div class="thumb t5"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="card-body">
+          <h3>Video Edit / Showreel</h3>
+          <p>Event edit, trailer, or montage. Mention the style and software.</p>
+          <div class="tags"><span>Premiere Pro</span><span>After Effects</span></div>
+          <a href="#" class="link">Watch →</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="animation" data-sfx>
+        <div class="thumb t6"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="card-body">
+          <h3>3D Character / Rig</h3>
+          <p>Modeling, rigging and a walk cycle or idle animation.</p>
+          <div class="tags"><span>Maya</span><span>Blender</span></div>
+          <a href="#" class="link">View →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3D VIEWER -->
+  <section id="viewer" class="section reveal">
+    <h2><span class="num">04</span> 3D Asset Viewer</h2>
+    <p class="sub">Drag to rotate · scroll to zoom. This is a demo model — swap it for your own (see README).</p>
+    <div class="viewer-wrap">
+      <canvas id="viewerCanvas"></canvas>
+      <div class="viewer-ui">
+        <button class="chip" id="vSpin" data-sfx>⟳ Auto-rotate: on</button>
+        <button class="chip" id="vWire" data-sfx>▦ Wireframe: off</button>
+        <button class="chip" id="vReset" data-sfx>↺ Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal contact">
+    <h2><span class="num">05</span> Let's build something</h2>
+    <p class="lead">Open to internships, collaborations, game jams and freelance design / editing work.</p>
+    <a class="btn primary big" href="Wendolucky5@gmail.com" data-sfx>✉Wendolucky5@gmail.com .com</a>
+    <a class="btn big" href="tel:+2547113570590" data-sfx>📞 +254 113570590</a>
+    <div class="socials">
+      <a href="https://www.instagram.com/?hl=en" data-sfx>Instagram</a>
+      <a href="https://www.pinterest.com/" data-sfx>Pinintrest</a>
+      <a href="#" data-sfx>GitHub</a>
+      <a href="#" data-sfx>YouTube</a>
+      <a href="#" data-sfx>LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Wendo Lucky · Built with HTML, CSS, JS &amp; Three.js</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
